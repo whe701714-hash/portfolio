@@ -59,3 +59,7 @@ body{background:radial-gradient(ellipse at 62% 65%,#505253 0%,#383A3B 48%,transp
 
 /* Broad studio light fields; transparent WebGL canvas preserves CSS backdrop. */
 body{background:radial-gradient(ellipse 75% 85% at 63% 43%,#5C5854 0%,#454341 35%,#303030 65%,transparent 95%),radial-gradient(ellipse 55% 50% at 80% 83%,#45434160 0%,transparent 80%),#202020}
+
+/* Unified industrial archive color blocking; backdrop and typography unchanged. */
+:root{--bg:#252525;--lens:#151515;--paper:#F2EFE8;--dark:#252525;--gray:#858585;--silver:#AEB5B7;--folder-cover:#F2EFE8;--folder-board:#252525;--folder-edge:#252525;--book-paper:#F2EFE8;--book-cover:#252525;--book-ink:#858585;--book-rings:#AEB5B7;--resume-paper:#F2EFE8;--resume-ink:#252525;--resume-muted:#858585;--envelope-paper:#F2EFE8;--envelope-fold:#858585;--envelope-edge:#252525}
+.object-label:hover,.object-label.is-hovered,.object-label[aria-pressed=true]{color:var(--lens)}
