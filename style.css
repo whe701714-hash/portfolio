@@ -49,3 +49,13 @@ button:focus-visible,a:focus-visible{outline-color:var(--orange)}
 .object-label:hover,.object-label.is-hovered,.object-label[aria-pressed=true]{background:var(--orange);border-color:var(--orange);color:var(--bg)}
 .object-label:hover:before,.object-label.is-hovered:before,.object-label[aria-pressed=true]:before{color:var(--bg)}
 #panel{background:var(--paper);color:var(--dark);box-shadow:0 25px 80px #0005}#close,#kicker{color:var(--dark)}#close:hover,#content a{color:#bf3e1d}#content .sample{border-color:var(--edge)}.sample small,.prototype-note{color:#666662}
+
+/* Studio tonal separation: scoped paper materials; camera palette is unchanged. */
+:root{--folder-cover:#DEDFDA;--folder-board:#B9BDB9;--folder-edge:#C9CDC8;--book-paper:#F3F1E9;--book-cover:#353737;--book-ink:#484B48;--resume-muted:#747771;--envelope-paper:#E3E5DF;--envelope-fold:#CDD1CA;--envelope-edge:#B9BFB7}
+body{background:radial-gradient(ellipse at 62% 65%,#505253 0%,#383A3B 48%,transparent 88%),linear-gradient(180deg,#242526 0%,#2B2D2E 100%)}
+
+/* Round 2: scoped product tones; shared camera palette unchanged. */
+:root{--folder-cover:#EAE7E0;--folder-board:#555451;--folder-edge:#8C8A85;--book-paper:#F3F0E9;--book-cover:#292929;--book-ink:#686662;--book-rings:#B8B9B6;--resume-paper:#E8E2D8;--resume-ink:#343434;--resume-muted:#77736E;--envelope-paper:#F2EFE8;--envelope-fold:#B8B5AE;--envelope-edge:#4B4A48}
+
+/* Broad studio light fields; transparent WebGL canvas preserves CSS backdrop. */
+body{background:radial-gradient(ellipse 75% 85% at 63% 43%,#5C5854 0%,#454341 35%,#303030 65%,transparent 95%),radial-gradient(ellipse 55% 50% at 80% 83%,#45434160 0%,transparent 80%),#202020}
