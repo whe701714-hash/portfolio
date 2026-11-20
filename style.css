@@ -37,18 +37,15 @@ h2{font-family:var(--type-zh);font-size:32px;font-weight:400;font-style:normal;l
 
 /* Object-led exhibition composition */
 .intro{top:auto;bottom:9%;left:5.5%}h1,.intro h1{font-size:32px;line-height:1.25;font-weight:400;letter-spacing:-.025em;margin:0}.title-en{font-size:17px;line-height:1.3;margin:15px 0 0}.object-label{font-size:11px;padding:5px 9px;letter-spacing:.06em}.object-label.is-hovered{background:#fffaf0;color:#1e303b;box-shadow:0 2px 12px #263c4930}@media(max-width:700px){header{inset:23px 22px auto}header a{font-size:20px}header a span{font-size:9px}.intro{top:auto;bottom:5%;left:7%}.intro h1{font-size:28px}.title-en{font-size:15px;margin-top:10px}.object-label{font-size:11px;padding:5px 7px}#panel{bottom:24px;max-height:48%}}
-/* Charcoal / vermilion color study: color-only overrides. */
-:root{color:#F7F7F4;background:#222222}
-body{background:#222222}
-header a,header button,h1,.intro h1,.title-en{color:#F7F7F4}
-header a span,header button small{color:#c8c8c3}
-header button:hover,header button:focus-visible,header a:hover{color:#FF6138}
-button:focus-visible,a:focus-visible{outline-color:#FF6138}
-.object-label{background:linear-gradient(115deg,#f3f0e8,#eeeee7 60%,#f5f2e9);color:#363633;border-color:#faf8ed80;box-shadow:0 1px 1px #00000030,1px 4px 9px #00000024}
-.object-label:before{color:#696963}
-.object-label:hover,.object-label.is-hovered{background:#f7f5ed;color:#292926;box-shadow:0 2px 12px #00000040}
-.object-label:hover:before,.object-label.is-hovered:before{color:#FF6138}
-#panel{background:#f2f3ed;color:#353532;box-shadow:0 25px 80px #00000030}
-#close,#kicker{color:#585852}#close:hover,#content a{color:#c44221}
-#content .sample{border-color:#d0d0c8}.sample small,.prototype-note{color:#65655e}
-
+/* Final 05 theme: single palette shared with Three.js through CSS variables. */
+:root{--bg:#222222;--bg-deep:#181818;--bg-light:#303030;--paper:#F7F7F4;--silver:#AEB5B7;--dark:#414141;--gray:#858585;--muted:#B6B6B3;--orange:#FF6138;--edge:#D8D8D5;--white:#FFFFFF;--lens:#111111;color:var(--paper);background:var(--bg)}
+body{background:radial-gradient(ellipse at 60% 48%,var(--bg-light) 0%,var(--bg) 63%,var(--bg-deep) 100%)}
+.grain{opacity:0}
+header a,header button,h1,.intro h1{color:var(--paper)}header a span,header button small,.title-en{color:var(--muted)}
+header button:hover,header button:focus-visible{color:var(--paper);text-decoration:underline;text-decoration-color:var(--orange);text-underline-offset:7px;text-decoration-thickness:1px}
+button:focus-visible,a:focus-visible{outline-color:var(--orange)}
+.object-label{background:var(--paper);color:var(--bg);border-color:var(--paper);box-shadow:0 1px 1px #0003,1px 4px 9px #0004;transition:opacity .3s,background-color .225s,color .225s,border-color .225s}
+.object-label:before{color:var(--gray)}
+.object-label:hover,.object-label.is-hovered,.object-label[aria-pressed=true]{background:var(--orange);border-color:var(--orange);color:var(--bg)}
+.object-label:hover:before,.object-label.is-hovered:before,.object-label[aria-pressed=true]:before{color:var(--bg)}
+#panel{background:var(--paper);color:var(--dark);box-shadow:0 25px 80px #0005}#close,#kicker{color:var(--dark)}#close:hover,#content a{color:#bf3e1d}#content .sample{border-color:var(--edge)}.sample small,.prototype-note{color:#666662}
