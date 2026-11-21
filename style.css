@@ -67,3 +67,9 @@ body{background:radial-gradient(ellipse 75% 85% at 63% 43%,#5C5854 0%,#454341 35
 /* Visual subtraction: remove large graphic blocks; retain structural dark surfaces. */
 :root{--bg:#292929;--lens:#191919;--paper:#F2EFE8;--dark:#292929;--gray:#858585;--silver:#AEB5B7;--folder-cover:#F2EFE8;--folder-board:#292929;--folder-edge:#292929;--book-paper:#F2EFE8;--book-cover:#292929;--book-ink:#858585;--book-rings:#AEB5B7;--resume-paper:#F2EFE8;--resume-ink:#292929;--resume-muted:#858585;--envelope-paper:#F2EFE8;--envelope-fold:#5B5B5B;--envelope-edge:#292929}
 
+/* Static off-camera glass diffusion study. No object or lighting changes. */
+body{isolation:isolate;background:radial-gradient(ellipse 58% 74% at 61% 46%,#454442 0%,#3b3b39 35%,#30302f 68%,transparent 100%),radial-gradient(ellipse 30% 58% at 91% 42%,#45444270 0%,transparent 85%),#242424}
+body::before,body::after{content:'';position:fixed;pointer-events:none;z-index:-1;inset:-5%;}
+body::before{background:radial-gradient(ellipse 7% 74% at 87% 32%,#f2efe819 0%,#77736e25 29%,transparent 72%),radial-gradient(ellipse 14% 64% at 94% 38%,#77736e28 0%,transparent 76%),radial-gradient(ellipse 5% 53% at 80% 18%,#19191955 0%,transparent 80%);transform:rotate(18deg);filter:blur(24px)}
+body::after{background:radial-gradient(ellipse 36% 19% at 64% 57%,#77736e24 0%,transparent 84%),radial-gradient(ellipse 34% 5% at 26% 91%,#f2efe810 0%,transparent 85%);filter:blur(30px)}
+@media(max-width:700px){body::before{filter:blur(16px);opacity:.7}body::after{filter:blur(18px);opacity:.6}}
