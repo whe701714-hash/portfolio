@@ -67,9 +67,9 @@ body{background:radial-gradient(ellipse 75% 85% at 63% 43%,#5C5854 0%,#454341 35
 /* Visual subtraction: remove large graphic blocks; retain structural dark surfaces. */
 :root{--bg:#292929;--lens:#191919;--paper:#F2EFE8;--dark:#292929;--gray:#858585;--silver:#AEB5B7;--folder-cover:#F2EFE8;--folder-board:#292929;--folder-edge:#292929;--book-paper:#F2EFE8;--book-cover:#292929;--book-ink:#858585;--book-rings:#AEB5B7;--resume-paper:#F2EFE8;--resume-ink:#292929;--resume-muted:#858585;--envelope-paper:#F2EFE8;--envelope-fold:#5B5B5B;--envelope-edge:#292929}
 
-/* Static off-camera glass diffusion study. No object or lighting changes. */
-body{isolation:isolate;background:radial-gradient(ellipse 58% 74% at 61% 46%,#454442 0%,#3b3b39 35%,#30302f 68%,transparent 100%),radial-gradient(ellipse 30% 58% at 91% 42%,#45444270 0%,transparent 85%),#242424}
-body::before,body::after{content:'';position:fixed;pointer-events:none;z-index:-1;inset:-5%;}
-body::before{background:radial-gradient(ellipse 7% 74% at 87% 32%,#f2efe819 0%,#77736e25 29%,transparent 72%),radial-gradient(ellipse 14% 64% at 94% 38%,#77736e28 0%,transparent 76%),radial-gradient(ellipse 5% 53% at 80% 18%,#19191955 0%,transparent 80%);transform:rotate(18deg);filter:blur(24px)}
-body::after{background:radial-gradient(ellipse 36% 19% at 64% 57%,#77736e24 0%,transparent 84%),radial-gradient(ellipse 34% 5% at 26% 91%,#f2efe810 0%,transparent 85%);filter:blur(30px)}
-@media(max-width:700px){body::before{filter:blur(16px);opacity:.7}body::after{filter:blur(18px);opacity:.6}}
+/* Static polished smoked glass: directional softbox reflections, no blur. */
+body{isolation:isolate;background:radial-gradient(ellipse 72% 90% at 61% 48%,#343434 0%,#2b2b2a 48%,transparent 90%),linear-gradient(120deg,#1c1c1c 0%,#242424 47%,#222221 78%,#1c1c1c 100%)}
+body::before,body::after{content:'';position:fixed;pointer-events:none;z-index:-1;filter:none;}
+body::before{width:15%;height:108%;left:82%;top:-29%;transform:rotate(24deg);background:linear-gradient(90deg,transparent 0%,#77736e08 8%,#d8d5ce24 22%,#d8d5ce30 42%,#d8d5ce25 68%,#77736e10 88%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0%,#000 22%,#000 49%,#0009 69%,transparent 96%);border-radius:32% 25% 40% 28%}
+body::after{width:42%;height:8%;left:23%;bottom:3%;transform:rotate(-23deg);background:linear-gradient(180deg,transparent 0%,#77736e05 19%,#d8d5ce0d 43%,#d8d5ce09 63%,transparent 100%);mask-image:linear-gradient(90deg,transparent,#000 35%,#000 62%,transparent)}
+@media(max-width:700px){body::before{width:23%;left:86%;opacity:.65}body::after{opacity:.45}}
